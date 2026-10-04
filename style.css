@@ -296,3 +296,18 @@ html:has(.speech-dialog[open]) { overflow: hidden; }
   .welcome-inner { transition: none; }
   .speech-dialog[open]::backdrop, .speech-dialog[open] .speech-box { animation: none; }
 }
+
+/* ===== video: pita kuning di belakang section, menyisakan putih sebelum footer ===== */
+#video-galeri {
+  padding-bottom: 7.5rem;   /* 4.5rem jarak bawah di dalam pita + 3rem putih */
+  background: linear-gradient(var(--gold), var(--gold)) top / 100% calc(100% - 3rem) no-repeat;
+}
+
+/* judul kartu video: putih berubah jadi navy saat kursor diarahkan */
+.album.video-item h3:hover { background: var(--navy); color: #fff; }
+
+/* karena latarnya kuning, warna hover yang tadinya kuning diganti navy supaya tetap terlihat */
+#video-galeri .more:hover,
+#video-galeri .more:focus-visible { text-decoration-color: var(--navy-d); }
+#video-galeri .arrow:hover:not(:disabled),
+#video-galeri .side-arrow:active { background: var(--navy); border-color: var(--navy); color: #fff; }
